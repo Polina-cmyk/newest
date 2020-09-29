@@ -1,7 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(192, 165, 218);
+}
+
 canvas {
-    height: 200px;
-    width: 400px;
+    height: 400px;
+    width: 700px;
     border: 1px solid black;
+    background-color: cornsilk;
 }
 
 #marker {
@@ -14,6 +23,7 @@ canvas {
 
 .brush-size {
     display: flex;
+    height: 30px;
 }
 .paint {
     display: flex;
@@ -21,7 +31,7 @@ canvas {
     padding: 20px;
 }
 
-#clear {
+.btn {
     width: 100px;
     padding: 10px;
     font-size: 1s4px;

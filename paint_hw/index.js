@@ -6,25 +6,27 @@ ctx.lineWidth = '';
 
 ctx.lineCap = 'round';
 
-document.getElementById('size').onchange = function() {
+
+document.getElementById('size').addEventListener('change', function () {
     ctx.lineWidth = this.value;
     marker.style.width = marker.style.height = ctx.lineWidth + 'px';
-    
-}
+    console.log(this)
+})
 
-document.getElementById('color').oninput = function(){
+document.getElementById('color').addEventListener('input', function () {
     color = this.value;
     marker.style.background = this.value;
-}
+    console.log(this)
+})
 
-canvas.onmousedown = function(event){
+canvas.onmousedown = function(){
     canvas.onmousemove = function (event) {
     var x = event.offsetX;
     var y = event.offsetY;
     var dx = event.movementX;
     var dy = event.movementY;
 
-  ctx.beginPath()
+    ctx.beginPath()
     ctx.moveTo(x, y);
     ctx.lineTo(x - dx, y - dy);
     ctx.stroke();
